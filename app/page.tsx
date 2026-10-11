@@ -4,9 +4,14 @@ import Outlet from "@/components/Outlet";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { hero, products, reviews } from "@/lib/data";
+import { reviews } from "@/lib/data";
+import { getProducts, getHeroImage } from "@/lib/api";
 
-export default function Page() {
+export const dynamic = "force-dynamic";
+
+export default async function Page() {
+  const [products, hero] = await Promise.all([getProducts(), getHeroImage()]);
+
   return (
     <div className="wrap">
       <Header />
