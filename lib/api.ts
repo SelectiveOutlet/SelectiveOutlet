@@ -8,7 +8,7 @@ export type Product = (typeof mockProducts)[number];
 export type ShoeDTO = {
   id: string;
   created_at: string;
-  size: number[];
+  size: string[];
   price: number | null;
   discount: number | null;
   title: string | null;
