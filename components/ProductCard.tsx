@@ -10,7 +10,7 @@ export default function ProductCard({ product: p, onOpen }: { product: Product; 
         <img alt={p.name} loading="lazy" src={p.images[0] || ""} />
         {off > 0 && <span className="off">−{off}%</span>}
         {p.example && <span className="ex">Пример</span>}
-        {p.sold && <span className="soldtag">Продадена</span>}
+        {p.sold && <span className="soldtag">Продадено</span>}
       </button>
       <div className="card-body">
         <h3>{p.name}</h3>
